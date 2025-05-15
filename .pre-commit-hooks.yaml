@@ -1,19 +1,11 @@
 -  id: moretiles-b4-pre
-   name: Lock for b4 exists
-   exclude: '.*'
-   entry: "test"
+   name: Lock for b4 is not present?
+   entry: "b4-test"
    language: system
    stages: [pre-commit]
-   args:
-     - '!'
-     - '-e'
-     - './.b4.lock'
 
 -  id: moretiles-b4-post
    name: Recreate lock for b4
-   exclude: '.*'
-   entry: "touch"
+   entry: "b4-post"
    language: system
    stages: [post-commit]
-   args:
-     - './.b4.lock'
