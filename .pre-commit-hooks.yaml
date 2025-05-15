@@ -1,10 +1,16 @@
-- "id": "moretiles-b4-pre"
-  "name": "Run b4.sh prior to commit"
-  "entry": "./b4.sh"
-  "language": "system"
-  "stages": "pre-commit"
-- "id": "moretiles-b4-post"
-  "name": "Recreate b4 lock"
-  "entry": "touch ./.b4.lock"
-  "language": "system"
-  "stages": "post-commit"
+[ 
+  {
+    "id": "moretiles-b4-pre",
+    "name": "Run b4.sh prior to commit",
+    "entry": "./b4.sh",
+    "language": "system",
+    "stages": "pre-commit" 
+  },
+  { 
+    "id": "moretiles-b4-post",
+    "name": "Recreate b4 lock",
+    "entry": "touch ./.b4.lock",
+    "language": "system",
+    "stages": "post-commit" 
+  }
+]
