@@ -1,10 +1,17 @@
 -  id: moretiles-b4-pre
-   name: Run b4.sh prior to commit
-   entry: ./b4.sh
+   name: Lock for b4 exists
+   entry: "test"
    language: system
    stages: [pre-commit]
+   args:
+     - '!'
+     - '-e'
+     - './.b4.lock'
+
 -  id: moretiles-b4-post
-   name: Recreate b4 lock
-   entry: touch ./.b4.lock
+   name: Recreate lock for b4
+   entry: "touch"
    language: system
    stages: [post-commit]
+   args:
+     - './.b4.lock'
