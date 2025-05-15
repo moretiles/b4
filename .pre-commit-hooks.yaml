@@ -1,9 +1,11 @@
+# Check if present
 -  id: moretiles-b4-pre
    name: Lock for b4 is not present?
    entry: "b4-test"
    language: system
    stages: [pre-commit]
 
+# Create once more
 -  id: moretiles-b4-post
    name: Recreate lock for b4
    entry: "b4-post"
