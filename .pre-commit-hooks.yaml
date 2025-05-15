@@ -1,5 +1,6 @@
 -  id: moretiles-b4-pre
    name: Lock for b4 exists
+   exclude: '.*'
    entry: "test"
    language: system
    stages: [pre-commit]
@@ -10,6 +11,7 @@
 
 -  id: moretiles-b4-post
    name: Recreate lock for b4
+   exclude: '.*'
    entry: "touch"
    language: system
    stages: [post-commit]
