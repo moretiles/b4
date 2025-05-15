@@ -8,4 +8,6 @@
    name: Recreate lock for b4
    entry: "b4-post"
    language: system
+   # always_run must be true for all post-commit stage commits
+   always_run: true
    stages: [post-commit]
