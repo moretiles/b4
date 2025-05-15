@@ -1,15 +1,20 @@
-# Check if present
--  id: moretiles-b4-pre
+-  id: moretiles-b4
    name: Lock for b4 is not present?
-   entry: "b4-test"
-   language: system
-   stages: [pre-commit]
+   entry: "b4"
+   language: golang
+
+# Check if present
+#-  id: moretiles-b4-pre
+#   name: Lock for b4 is not present?
+#   entry: "b4-test"
+#   language: system
 
 # Create once more
--  id: moretiles-b4-post
-   name: Recreate lock for b4
-   entry: "b4-post"
-   language: system
-   # always_run must be true for all post-commit stage commits
-   always_run: true
-   stages: [post-commit]
+# Was never able to get this hook working, feel like I'm missing something about how stages work
+#-  id: moretiles-b4-post
+#   name: Recreate lock for b4
+#   entry: "b4-post"
+#   language: system
+#   # always_run must be true for all post-commit stage commits
+#   always_run: true
+#   stages: [post-commit]
